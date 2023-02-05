@@ -7,11 +7,11 @@ import Home from '../Home';
 function App() {
   return (
     <div className="App">
-       <NavBar />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
+      <NavBar />
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+      </Routes>
 
     </div>
   );

@@ -1,0 +1,91 @@
+body {
+  background: rgb(154,220,255);
+  background: linear-gradient(90deg, rgba(154,220,255,1) 0%, rgba(252,188,255,1) 100%);
+  color: rgb(0, 0, 0);
+  height: 100vh;
+  width: 98vw;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1rem;
+    h2 {
+        margin: 0;
+        padding: 15px;
+    }
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  h1 {
+    margin: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  ul > div {
+    margin: 1rem auto;
+  }
+  li {
+    list-style: none;
+    margin: 0 auto;
+
+    img {
+      max-width: 70vw;
+      max-height: 70vh;
+      border-radius:80px;
+    }
+  }
+
+  button {
+    margin: 1rem auto;
+    background-color: rgb(245, 245, 245);
+    padding: 1rem;
+    border:none;
+    border-radius: 10px;
+  }
+
+  button:hover {
+    background-color: rgb(197, 159, 195);
+
+  }
+  
+  .link {
+    color: rgb(0, 0, 0);
+    margin: auto;
+    padding: 0px 10px 0px 10px;
+    margin: 0 2rem;
+    text-decoration: none;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 30px 40px rgba(255, 92, 247,.1);
+  }
+  
+  .link:hover {
+    background-color: rgb(197, 159, 195);
+  }
+
+  .duel {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .duelist {
+      display: flex;
+      flex-flow: column nowrap;
+      margin-bottom: 4rem;
+    }
+  }
+
+  
