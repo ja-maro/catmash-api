@@ -14,7 +14,7 @@
 	<name>CatMashAPI</name>
 	<description>API for CatMash project</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -57,6 +57,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>catmash-api</finalName>
 	</build>
 
 </project>

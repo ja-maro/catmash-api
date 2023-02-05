@@ -1,11 +1,21 @@
 version: "3.9"
 
 services:
-  mysql_db:
+
+  catmash_api:
+    build: ./CatMashAPI
+    container_name: catmash_api
+    restart: always
+    ports:
+      - "8090:8090"
+    links:
+      - catmash_db
+    depends_on:
+      - catmash_db
+
+  catmash_db:
     image: mysql:8
     container_name: catmash_db
-    ports:
-      - "3306:3306"
     volumes:
       - ./mysql-db:/var/lib/mysql
     restart: always
