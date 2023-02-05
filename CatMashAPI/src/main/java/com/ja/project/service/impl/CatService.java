@@ -2,9 +2,13 @@ package com.ja.project.service.impl;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.ja.project.model.Cat;
 import com.ja.project.repository.CatRepository;
@@ -43,6 +47,18 @@ public class CatService implements ICatService {
 	private int generateRandomCatId(Long catNumber) {
 		return (int) ((Math.random() * (catNumber - 1)) + 1);
 	}
-	
-	
+
+	@Override
+	public ResponseEntity<Cat> voteForCatId(int id) {
+		Optional<Cat> dbCat = catRepository.findById(id);
+		if (dbCat.isPresent()) {
+			Cat cat = dbCat.get();
+			cat.vote();
+			Cat updatedCat = catRepository.save(cat);
+			return ResponseEntity.ok(updatedCat);
+		} else {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+		}
+	}
+
 }

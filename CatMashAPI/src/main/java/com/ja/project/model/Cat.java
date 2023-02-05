@@ -56,6 +56,12 @@ public class Cat {
 		this.jsonId = jsonId;
 		this.popularity = 0;
 	}
+	
+	//METHODS
+	
+	public void vote() {
+		this.popularity++;
+	}
 
 
 	//GETTERS & SETTERS
