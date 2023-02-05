@@ -70,49 +70,26 @@ public class Cat {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getPicture() {
 		return picture;
-	}
-
-	public void setPicture(String picture) {
-		this.picture = picture;
 	}
 
 	public String getJsonId() {
 		return jsonId;
 	}
 
-	public void setJsonId(String jsonId) {
-		this.jsonId = jsonId;
-	}
-
 	public int getPopularity() {
 		return popularity;
-	}
-
-	public void setPopularity(int popularity) {
-		this.popularity = popularity;
 	}
 
 	public Instant getCreationDate() {
 		return creationDate;
 	}
 
-	public void setCreationDate(Instant creationDate) {
-		this.creationDate = creationDate;
-	}
-
 	public Instant getUpdatedDate() {
 		return updatedDate;
 	}
 
-	public void setUpdatedDate(Instant updatedDate) {
-		this.updatedDate = updatedDate;
-	}
 	//EQUALS & HASHCODE
 	
 	@Override
