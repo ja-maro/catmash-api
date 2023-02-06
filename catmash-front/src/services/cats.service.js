@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const API_URL = "http://localhost:8090/";
-const API_URL = process.env.REACT_APP_CATMASH_API_URL;
+const API_URL = "http://localhost:8090/";
+// const API_URL = process.env.REACT_APP_CATMASH_API_URL;
 
 const getContestants = async (id) => {
     let response;
