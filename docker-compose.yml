@@ -2,6 +2,16 @@ version: "3.9"
 
 services:
 
+  catmash_front:
+    container_name: catmash_front
+    environment:
+      - "REACT_APP_CATMASH_API_URL=http://localhost:8090"
+    build: ./catmash-front
+    ports:
+      - "3000:3000"
+    depends_on:
+      - catmash_api
+
   catmash_api:
     build: ./CatMashAPI
     container_name: catmash_api
@@ -24,3 +34,6 @@ services:
       - MYSQL_PASSWORD=password
       - MYSQL_USER=application
       - MYSQL_DATABASE=catmash_db
+
+# networks:
+#   name: catmash_network

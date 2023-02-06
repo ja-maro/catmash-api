@@ -1,12 +1,14 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8090/";
+// const API_URL = "http://localhost:8090/";
+const API_URL = process.env.REACT_APP_CATMASH_API_URL;
 
 const getContestants = async (id) => {
     let response;
     await axios
         .get(API_URL + "cats", {})
         .then((result) => {
+            console.log("-API_URL : " + API_URL);
             response = result;
         })
         .catch((error) => {
